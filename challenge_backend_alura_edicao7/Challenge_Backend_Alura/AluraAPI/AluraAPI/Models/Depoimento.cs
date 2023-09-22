@@ -4,6 +4,8 @@ namespace AluraAPI.Models
 {
     public class Depoimento
     {
+        [Key]
+        [Required]
         public int Id { get; set; }
         public string foto { get; set; }
         [Required(ErrorMessage = "O campo depoimento é obrigatório")]

@@ -1,4 +1,6 @@
-﻿using AluraAPI.Models;
+﻿using AluraAPI.Data;
+using AluraAPI.Models;
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AluraAPI.Controllers;
@@ -7,27 +9,34 @@ namespace AluraAPI.Controllers;
 [Route("[controller]")]
 public class DepoimentosController : ControllerBase
 {
-    private static List<Depoimento> depoimentos = new List<Depoimento>();
-    private static int id = 0;
+    private DepoimentoContext _context;
+    private IMapper _mapper;
+
+    public DepoimentosController(DepoimentoContext context, IMapper mapper)
+    {
+        _context = context;
+        _mapper = mapper;
+    }
 
     [HttpPost]
-    public IActionResult insereDepoimento([FromBody] Depoimento depoimento)
+    public IActionResult insereDepoimento([FromBody] Depoimento depoimentoDto)
     {
-        depoimento.Id = id++;
-        depoimentos.Add(depoimento);
+        Depoimento depoimento = _mapper.Map<Depoimento>(depoimentoDto);
+        _context.Depoimentos.Add(depoimento);
+        _context.SaveChanges();
         return CreatedAtAction(nameof(retornaDepoimentoPorId), new { id = depoimento.Id }, depoimento);
     }
 
     [HttpGet]
     public IEnumerable<Depoimento> retornaDepoimentos([FromQuery] int skip = 0, [FromQuery]  int take = 50)
     {
-        return depoimentos.Skip(skip).Take(take);
+        return _context.Depoimentos.Skip(skip).Take(take);
     }
 
     [HttpGet("{id}")]
     public IActionResult retornaDepoimentoPorId(int id)
     {
-        var depoimento = depoimentos.FirstOrDefault(depoimento => depoimento.Id == id);
+        var depoimento = _context.Depoimentos.FirstOrDefault(depoimento => depoimento.Id == id);
 
         if (depoimento == null) return NotFound();
         return Ok();

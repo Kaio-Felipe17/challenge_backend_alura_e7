@@ -9,6 +9,8 @@ var connectionString = builder.Configuration.GetConnectionString("DepoimentoConn
 builder.Services.AddDbContext<DepoimentoContext>(opts =>
     opts.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
 
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
 // Add services to the container.
 
 builder.Services.AddControllers();
