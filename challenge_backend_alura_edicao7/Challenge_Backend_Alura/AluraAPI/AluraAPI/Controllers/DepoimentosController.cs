@@ -1,4 +1,5 @@
 ﻿using AluraAPI.Data;
+using AluraAPI.Data.Dtos;
 using AluraAPI.Models;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
@@ -39,6 +40,16 @@ public class DepoimentosController : ControllerBase
         var depoimento = _context.Depoimentos.FirstOrDefault(depoimento => depoimento.Id == id);
 
         if (depoimento == null) return NotFound();
-        return Ok();
+        return CreatedAtAction(nameof(retornaDepoimentoPorId), new { id = depoimento.Id }, depoimento);
+    }
+
+    [HttpPut("{id}")]
+    public IActionResult atualizaDepoimento(int id, [FromBody] UpdateDepoimentoDto depoimentoDto)
+    {
+        var depoimento = _context.Depoimentos.FirstOrDefault(depoimento => depoimento.Id == id);
+        if (depoimento == null) return NotFound();
+        _mapper.Map(depoimentoDto, depoimento);
+        _context.SaveChanges();
+        return NoContent();
     }
 }
