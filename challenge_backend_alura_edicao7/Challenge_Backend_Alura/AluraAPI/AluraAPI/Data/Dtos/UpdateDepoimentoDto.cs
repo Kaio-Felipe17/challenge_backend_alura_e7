@@ -1,9 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using System.Drawing;
 
 namespace AluraAPI.Data.Dtos;
 
-public class CreateDepoimentoDto
+public class UpdateDepoimentoDto
 {
     public IFormFile foto { get; set; }
     [Required(ErrorMessage = "O campo depoimento é obrigatório")]

@@ -84,6 +84,7 @@ C:\Users\Kaio Pereira\Desktop\Pessoal\projetos\challenge_backend_alura_e7\challe
 C:\Users\Kaio Pereira\Desktop\Pessoal\projetos\challenge_backend_alura_e7\challenge_backend_alura_edicao7\Challenge_Backend_Alura\AluraAPI\AluraAPI\obj\Debug\net6.0\AluraAPI.pdb
 C:\Users\Kaio Pereira\Desktop\Pessoal\projetos\challenge_backend_alura_e7\challenge_backend_alura_edicao7\Challenge_Backend_Alura\AluraAPI\AluraAPI\obj\Debug\net6.0\AluraAPI.genruntimeconfig.cache
 C:\Users\Kaio Pereira\Desktop\Pessoal\projetos\challenge_backend_alura_e7\challenge_backend_alura_edicao7\Challenge_Backend_Alura\AluraAPI\AluraAPI\obj\Debug\net6.0\ref\AluraAPI.dll
+<<<<<<< HEAD
 C:\Users\kaio0\OneDrive\Desktop\projetos\challenge_backend_alura_e7\challenge_backend_alura_edicao7\Challenge_Backend_Alura\AluraAPI\AluraAPI\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\kaio0\OneDrive\Desktop\projetos\challenge_backend_alura_e7\challenge_backend_alura_edicao7\Challenge_Backend_Alura\AluraAPI\AluraAPI\bin\Debug\net6.0\appsettings.json
 C:\Users\kaio0\OneDrive\Desktop\projetos\challenge_backend_alura_e7\challenge_backend_alura_edicao7\Challenge_Backend_Alura\AluraAPI\AluraAPI\bin\Debug\net6.0\AluraAPI.exe
@@ -140,3 +141,7 @@ C:\Users\kaio0\OneDrive\Desktop\projetos\challenge_backend_alura_e7\challenge_ba
 C:\Users\kaio0\OneDrive\Desktop\projetos\challenge_backend_alura_e7\challenge_backend_alura_edicao7\Challenge_Backend_Alura\AluraAPI\AluraAPI\obj\Debug\net6.0\AluraAPI.pdb
 C:\Users\kaio0\OneDrive\Desktop\projetos\challenge_backend_alura_e7\challenge_backend_alura_edicao7\Challenge_Backend_Alura\AluraAPI\AluraAPI\obj\Debug\net6.0\AluraAPI.genruntimeconfig.cache
 C:\Users\kaio0\OneDrive\Desktop\projetos\challenge_backend_alura_e7\challenge_backend_alura_edicao7\Challenge_Backend_Alura\AluraAPI\AluraAPI\obj\Debug\net6.0\ref\AluraAPI.dll
+=======
+C:\Users\Kaio Pereira\Desktop\Pessoal\projetos\challenge_backend_alura_e7\challenge_backend_alura_edicao7\Challenge_Backend_Alura\AluraAPI\AluraAPI\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\Kaio Pereira\Desktop\Pessoal\projetos\challenge_backend_alura_e7\challenge_backend_alura_edicao7\Challenge_Backend_Alura\AluraAPI\AluraAPI\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+>>>>>>> b3c158e99ac6fef957c93f048cdc83640410377c
