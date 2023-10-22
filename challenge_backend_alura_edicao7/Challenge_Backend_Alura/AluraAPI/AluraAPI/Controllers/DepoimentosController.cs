@@ -2,6 +2,8 @@
 using AluraAPI.Models;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using System;
+using System.IO;
 
 namespace AluraAPI.Controllers;
 
@@ -21,6 +23,14 @@ public class DepoimentosController : ControllerBase
     [HttpPost]
     public IActionResult insereDepoimento([FromBody] Depoimento depoimentoDto)
     {
+        #region Setting folder path and file name and saving the photos
+        string folderPath = "C:\\Users\\kaio0\\OneDrive\\Desktop\\projetos\\challenge_backend_alura_e7\\challenge_backend_alura_edicao7\\Challenge_Backend_Alura\\AluraAPI\\AluraAPI\\Photos";
+        string fileName = $"{depoimentoDto.nome}.jpg";
+        string fullPath = Path.Combine(folderPath, fileName);
+        byte[] photoBytes = Convert.FromBase64String(depoimentoDto.foto);
+        System.IO.File.WriteAllBytes(fullPath, photoBytes);
+        #endregion
+
         Depoimento depoimento = _mapper.Map<Depoimento>(depoimentoDto);
         _context.Depoimentos.Add(depoimento);
         _context.SaveChanges();

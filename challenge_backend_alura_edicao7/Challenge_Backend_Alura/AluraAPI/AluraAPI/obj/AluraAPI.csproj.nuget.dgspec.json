@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Kaio Pereira\\Desktop\\Pessoal\\projetos\\challenge_backend_alura_e7\\challenge_backend_alura_edicao7\\Challenge_Backend_Alura\\AluraAPI\\AluraAPI\\AluraAPI.csproj": {}
+    "C:\\Users\\kaio0\\OneDrive\\Desktop\\projetos\\challenge_backend_alura_e7\\challenge_backend_alura_edicao7\\Challenge_Backend_Alura\\AluraAPI\\AluraAPI\\AluraAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Kaio Pereira\\Desktop\\Pessoal\\projetos\\challenge_backend_alura_e7\\challenge_backend_alura_edicao7\\Challenge_Backend_Alura\\AluraAPI\\AluraAPI\\AluraAPI.csproj": {
+    "C:\\Users\\kaio0\\OneDrive\\Desktop\\projetos\\challenge_backend_alura_e7\\challenge_backend_alura_edicao7\\Challenge_Backend_Alura\\AluraAPI\\AluraAPI\\AluraAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kaio Pereira\\Desktop\\Pessoal\\projetos\\challenge_backend_alura_e7\\challenge_backend_alura_edicao7\\Challenge_Backend_Alura\\AluraAPI\\AluraAPI\\AluraAPI.csproj",
+        "projectUniqueName": "C:\\Users\\kaio0\\OneDrive\\Desktop\\projetos\\challenge_backend_alura_e7\\challenge_backend_alura_edicao7\\Challenge_Backend_Alura\\AluraAPI\\AluraAPI\\AluraAPI.csproj",
         "projectName": "AluraAPI",
-        "projectPath": "C:\\Users\\Kaio Pereira\\Desktop\\Pessoal\\projetos\\challenge_backend_alura_e7\\challenge_backend_alura_edicao7\\Challenge_Backend_Alura\\AluraAPI\\AluraAPI\\AluraAPI.csproj",
-        "packagesPath": "C:\\Users\\Kaio Pereira\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kaio Pereira\\Desktop\\Pessoal\\projetos\\challenge_backend_alura_e7\\challenge_backend_alura_edicao7\\Challenge_Backend_Alura\\AluraAPI\\AluraAPI\\obj\\",
+        "projectPath": "C:\\Users\\kaio0\\OneDrive\\Desktop\\projetos\\challenge_backend_alura_e7\\challenge_backend_alura_edicao7\\Challenge_Backend_Alura\\AluraAPI\\AluraAPI\\AluraAPI.csproj",
+        "packagesPath": "C:\\Users\\kaio0\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kaio0\\OneDrive\\Desktop\\projetos\\challenge_backend_alura_e7\\challenge_backend_alura_edicao7\\Challenge_Backend_Alura\\AluraAPI\\AluraAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Kaio Pereira\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\kaio0\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -86,7 +87,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
         }
       }
     }
