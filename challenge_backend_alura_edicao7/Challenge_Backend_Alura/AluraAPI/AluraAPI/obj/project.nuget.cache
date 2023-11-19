@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "soRmjKFrLwrWcuZDbaDFJbNgz7t8cBioeh9ofPuFsDCmHKH2O5iUHVhvfySkOmWI84gmXGxJESuzwljkPZF4GQ==",
+  "dgSpecHash": "xxLcI5EYTdleosGWts2rN2D3TTQSVqlm1S5N+3APSDnRaXOneJGV+W80s1UKDHrlR6SD7uagWU+sQpX7e1VvQg==",
   "success": true,
   "projectFilePath": "C:\\Users\\kaio0\\OneDrive\\Desktop\\projetos\\challenge_backend_alura_e7\\challenge_backend_alura_edicao7\\Challenge_Backend_Alura\\AluraAPI\\AluraAPI\\AluraAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kaio0\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\kaio0\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
+    "C:\\Users\\kaio0\\.nuget\\packages\\dotenv.net\\3.1.3\\dotenv.net.3.1.3.nupkg.sha512",
     "C:\\Users\\kaio0\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\kaio0\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\kaio0\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.11\\microsoft.entityframeworkcore.7.0.11.nupkg.sha512",

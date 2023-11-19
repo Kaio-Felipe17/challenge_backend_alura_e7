@@ -5,6 +5,8 @@ using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.IO;
+using System.Collections.Generic;
+using dotenv.net;
 
 namespace AluraAPI.Controllers;
  
@@ -25,7 +27,8 @@ public class DepoimentosController : ControllerBase
     public IActionResult insereDepoimento([FromBody] Depoimento depoimentoDto)
     {
         #region Setting folder path and file name and saving the photos
-        string folderPath = FolderPath.folderPath;
+        dotenv.net.DotEnv.Load();
+        string folderPath = Environment.GetEnvironmentVariable("folderPath");
         string fileName = $"{depoimentoDto.nome}.jpg";
         string fullPath = Path.Combine(folderPath, fileName);
         byte[] photoBytes = Convert.FromBase64String(depoimentoDto.foto);
