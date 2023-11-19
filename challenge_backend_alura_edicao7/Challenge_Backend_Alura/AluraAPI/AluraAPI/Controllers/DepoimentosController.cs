@@ -7,7 +7,7 @@ using System;
 using System.IO;
 
 namespace AluraAPI.Controllers;
-
+ 
 [ApiController]
 [Route("[controller]")]
 public class DepoimentosController : ControllerBase
@@ -25,10 +25,9 @@ public class DepoimentosController : ControllerBase
     public IActionResult insereDepoimento([FromBody] Depoimento depoimentoDto)
     {
         #region Setting folder path and file name and saving the photos
-        FolderPath path = new FolderPath();
-        string FolderPath = path.folderPath();
+        string folderPath = FolderPath.folderPath;
         string fileName = $"{depoimentoDto.nome}.jpg";
-        string fullPath = Path.Combine(FolderPath, fileName);
+        string fullPath = Path.Combine(folderPath, fileName);
         byte[] photoBytes = Convert.FromBase64String(depoimentoDto.foto);
         System.IO.File.WriteAllBytes(fullPath, photoBytes);
         #endregion
