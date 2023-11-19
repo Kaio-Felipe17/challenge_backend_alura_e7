@@ -25,9 +25,10 @@ public class DepoimentosController : ControllerBase
     public IActionResult insereDepoimento([FromBody] Depoimento depoimentoDto)
     {
         #region Setting folder path and file name and saving the photos
-        string folderPath = "C:\\Users\\kaio0\\OneDrive\\Desktop\\projetos\\challenge_backend_alura_e7\\challenge_backend_alura_edicao7\\Challenge_Backend_Alura\\AluraAPI\\AluraAPI\\Photos";
+        FolderPath path = new FolderPath();
+        string FolderPath = path.folderPath();
         string fileName = $"{depoimentoDto.nome}.jpg";
-        string fullPath = Path.Combine(folderPath, fileName);
+        string fullPath = Path.Combine(FolderPath, fileName);
         byte[] photoBytes = Convert.FromBase64String(depoimentoDto.foto);
         System.IO.File.WriteAllBytes(fullPath, photoBytes);
         #endregion
