@@ -4,6 +4,8 @@ using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.IO;
+using System.Security.Cryptography;
+using static System.Net.WebRequestMethods;
 
 namespace AluraAPI.Controllers;
 
@@ -20,8 +22,18 @@ public class DepoimentosHomeController : ControllerBase
     }
 
     [HttpGet]
-    public IEnumerable<ReadDepoimentoDto> retornaDepoimentosAleatoriamente([FromQuery] int skip = 0, [FromQuery] int take = 3)
+    public List<int> retornaDepoimentosAleatoriamente()
     {
-        return _mapper.Map<List<ReadDepoimentoDto>>(_context.Depoimentos.Skip(skip).Take(take));
+        int tamanhoLista = _context.Depoimentos.Count();
+        List<int> depoimentos = new List<int>();
+
+        for (int i = 0; i <= 2; i++)
+        {
+            int randomNumber = RandomNumberGenerator.GetInt32(1, tamanhoLista);
+            depoimentos.Add();
+        }
+
+        //return _mapper.Map<List<ReadDepoimentoDto>>(_context.Depoimentos.Skip(0).Take(3));
+        return depoimentos;
     }
 }
