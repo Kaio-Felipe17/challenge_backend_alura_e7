@@ -7,9 +7,10 @@ using System;
 using System.IO;
 using System.Collections.Generic;
 using dotenv.net;
+using System.Security.Cryptography;
 
 namespace AluraAPI.Controllers;
- 
+
 [ApiController]
 [Route("[controller]")]
 public class DepoimentosController : ControllerBase
@@ -42,7 +43,7 @@ public class DepoimentosController : ControllerBase
     }
 
     [HttpGet]
-    public IEnumerable<ReadDepoimentoDto> retornaDepoimentos([FromQuery] int skip = 0, [FromQuery]  int take = 50)
+    public IEnumerable<ReadDepoimentoDto> retornaDepoimentos([FromQuery] int skip = 0, [FromQuery] int take = 50)
     {
         return _mapper.Map<List<ReadDepoimentoDto>>(_context.Depoimentos.Skip(skip).Take(take));
     }
@@ -69,10 +70,29 @@ public class DepoimentosController : ControllerBase
     [HttpDelete("{id}")]
     public IActionResult DeletaDepoimento(int id)
     {
-        var depoimento = _context.Depoimentos.FirstOrDefault(depoimento=>depoimento.Id == id);
+        var depoimento = _context.Depoimentos.FirstOrDefault(depoimento => depoimento.Id == id);
         if (depoimento == null) return NotFound();
         _context.Remove(depoimento);
         _context.SaveChanges();
         return NoContent();
+    }
+
+    [HttpGet("depoimentos-home")]
+    public List<AluraAPI.Models.Depoimento> retornaDepoimentosAleatoriamente()
+    {
+        int tamanhoLista = _context.Depoimentos.Count();
+        List<AluraAPI.Models.Depoimento> depoimentosAleatorios = new List<AluraAPI.Models.Depoimento>();
+
+        for (int i = 0; i <= 2; i++)
+        {
+            int idDepoimentoAleatorio = RandomNumberGenerator.GetInt32(1, tamanhoLista);
+
+            var depoimentoAleatorio = _context.Depoimentos.FirstOrDefault(
+                                      depoimento => depoimento.Id == idDepoimentoAleatorio);
+
+            depoimentosAleatorios.Add(depoimentoAleatorio);
+        }
+
+        return depoimentosAleatorios;
     }
 }
