@@ -8,6 +8,7 @@ using System.IO;
 using System.Collections.Generic;
 using dotenv.net;
 using System.Security.Cryptography;
+using Microsoft.EntityFrameworkCore;
 
 namespace AluraAPI.Controllers;
 
@@ -75,24 +76,5 @@ public class DepoimentosController : ControllerBase
         _context.Remove(depoimento);
         _context.SaveChanges();
         return NoContent();
-    }
-
-    [HttpGet("depoimentos-home")]
-    public List<AluraAPI.Models.Depoimento> retornaDepoimentosAleatoriamente()
-    {
-        int tamanhoLista = _context.Depoimentos.Count();
-        List<AluraAPI.Models.Depoimento> depoimentosAleatorios = new List<AluraAPI.Models.Depoimento>();
-
-        for (int i = 0; i <= 2; i++)
-        {
-            int idDepoimentoAleatorio = RandomNumberGenerator.GetInt32(1, tamanhoLista);
-
-            var depoimentoAleatorio = _context.Depoimentos.FirstOrDefault(
-                                      depoimento => depoimento.Id == idDepoimentoAleatorio);
-
-            depoimentosAleatorios.Add(depoimentoAleatorio);
-        }
-
-        return depoimentosAleatorios;
     }
 }
